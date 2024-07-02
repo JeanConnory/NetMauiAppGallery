@@ -15,7 +15,7 @@ public class CategoryRepository
             Name = "Layout",
             Components = new List<Component>
             {
-                new Component { Title = "StackLayout", Description = "Organização sequencial dos elementos.", Page = new StackLayoutPage() }
+                new Component { Title = "StackLayout", Description = "Organização sequencial dos elementos.", Page = typeof(StackLayoutPage) }
             }
         });
 
