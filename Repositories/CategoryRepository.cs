@@ -1,4 +1,5 @@
 ﻿using AppMauiGallery.Models;
+using AppMauiGallery.Views.Components.Forms;
 using AppMauiGallery.Views.Components.Mains;
 using AppMauiGallery.Views.Components.Visuais;
 using AppMauiGallery.Views.Layouts;
@@ -45,6 +46,25 @@ public class CategoryRepository
                 new Component { Title = "Shadow", Description = "Adiciona sombra ao elemento.", Page = typeof(ShadowPage) }
             }
         });
+        categories.Add(new Category()
+        {
+            Name = "Formulários",
+            Components = new List<Component>
+            {
+                new Component { Title = "Entry", Description = "Cria caixa de entrada de texto.", Page = typeof(EntryPage) },
+                new Component { Title = "Editor", Description = "Cria caixa de entrada de texto de multiplas linhas.", Page = typeof(EditorPage) },
+                new Component { Title = "Checkbox", Description = "Cria caixa de marcação.", Page = typeof(CheckboxPage) },
+                new Component { Title = "RadioButton", Description = "Cria caixa de marcação de escolha unica.", Page = typeof(RadioButtonPage) },
+                new Component { Title = "Switch", Description = "Caixa de marcação booleana.", Page = typeof(SwitchPage) },
+                new Component { Title = "Stepper", Description = "Cria opções de incrementar ou decrementar um número.", Page = typeof(StepperPage) },
+                new Component { Title = "Slider", Description = "Cria barra que incrementar ou decrementar um número.", Page = typeof(SliderPage) },
+                new Component { Title = "TimerPicker", Description = "Seleção da hora e do minuto.", Page = typeof(TimePickerPage) },
+                new Component { Title = "DatePicker", Description = "Seleção da data.", Page = typeof(DatePickerPage) },
+                new Component { Title = "SearchBar", Description = "Caixa de busca.", Page = typeof(SearchBarPage) },
+                new Component { Title = "Picker", Description = "Pegar itens de uma lista.", Page = typeof(PickerPage) },
+            }
+        });
+
 
         return categories;
     }
