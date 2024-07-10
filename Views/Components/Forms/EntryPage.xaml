@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMauiGallery.Views.Components.Forms.EntryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="EntryPage">
+    <VerticalStackLayout Padding="40">
+        <!--<Label
+            HorizontalOptions="Start"
+            Text="Digite seu nome:"
+            VerticalOptions="Center" />-->
+        <Entry
+            ClearButtonVisibility="WhileEditing"
+            Completed="Entry_Completed"
+            CursorPosition="2"
+            IsPassword="False"
+            IsReadOnly="False"
+            IsSpellCheckEnabled="True"
+            IsTextPredictionEnabled="True"
+            Keyboard="Numeric"
+            MaxLength="50"
+            Placeholder="Digite seu nome"
+            PlaceholderColor="Gray"
+            SelectionLength="3"
+            Text=""
+            TextChanged="Entry_TextChanged"
+            TextColor="White" />
+        <Label x:Name="LblText" />
+    </VerticalStackLayout>
+</ContentPage>
