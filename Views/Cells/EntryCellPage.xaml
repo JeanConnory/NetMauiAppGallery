@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMauiGallery.Views.Cells.EntryCellPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="EntryCellPage">
+    <VerticalStackLayout Padding="30">
+        <TableView>
+            <TableSection Title="Cadastro de colaboradores">
+                <EntryCell
+                    HorizontalTextAlignment="Center"
+                    Keyboard="Numeric"
+                    Label="Digite o nome do presidente"
+                    Placeholder="Presidente" />
+                <EntryCell Label="Digite o nome do Diretor de RH" />
+                <EntryCell Label="Digite o nome do Contador" />
+            </TableSection>
+        </TableView>
+    </VerticalStackLayout>
+</ContentPage>

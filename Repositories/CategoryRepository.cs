@@ -1,4 +1,5 @@
 ﻿using AppMauiGallery.Models;
+using AppMauiGallery.Views.Cells;
 using AppMauiGallery.Views.Components.Forms;
 using AppMauiGallery.Views.Components.Mains;
 using AppMauiGallery.Views.Components.Visuais;
@@ -61,10 +62,21 @@ public class CategoryRepository
                 new Component { Title = "TimerPicker", Description = "Seleção da hora e do minuto.", Page = typeof(TimePickerPage) },
                 new Component { Title = "DatePicker", Description = "Seleção da data.", Page = typeof(DatePickerPage) },
                 new Component { Title = "SearchBar", Description = "Caixa de busca.", Page = typeof(SearchBarPage) },
-                new Component { Title = "Picker", Description = "Pegar itens de uma lista.", Page = typeof(PickerPage) },
+                new Component { Title = "Picker", Description = "Pegar itens de uma lista.", Page = typeof(PickerPage) }
             }
         });
-
+        categories.Add(new Category()
+        {
+            Name = "Celulas",
+            Components = new List<Component>
+            {
+                new Component { Title = "TextCell", Description = "Apresenta até duas labels onde uma é destinada ao título e outra a descrição", Page = typeof(TextCellPage) },
+                new Component { Title = "ImageCell", Description = "Apresenta uma imagem e as duas labels do TextCell", Page = typeof(ImageCellPage) },
+                new Component { Title = "SwitchCell", Description = "Apresenta um switch e uma label", Page = typeof(SwitchCellPage) },
+                new Component { Title = "EntryCell", Description = "Apresenta um entry e uma label", Page = typeof(EntryCellPage) },
+                new Component { Title = "ViewCell", Description = "Permite criar celula com layout personalizado", Page = typeof(ViewCellPage) },
+            }
+        });
 
         return categories;
     }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMauiGallery.Views.Cells.ImageCellPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ImageCellPage">
+    <VerticalStackLayout Padding="50">
+        <TableView>
+            <TableSection Title="Lista de colaboradores">
+                <ImageCell
+                    Detail="Analista de sistemas"
+                    DetailColor="Gray"
+                    ImageSource="https://www.hairbrasil.com/img/uploads/paulo-ricardo2.jpg"
+                    Text="João Rodrigues"
+                    TextColor="Aqua" />
+            </TableSection>
+        </TableView>
+    </VerticalStackLayout>
+</ContentPage>
