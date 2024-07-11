@@ -4,6 +4,7 @@ using AppMauiGallery.Views.Components.Forms;
 using AppMauiGallery.Views.Components.Mains;
 using AppMauiGallery.Views.Components.Visuais;
 using AppMauiGallery.Views.Layouts;
+using AppMauiGallery.Views.Lists;
 
 namespace AppMauiGallery.Repositories;
 
@@ -75,6 +76,16 @@ public class CategoryRepository
                 new Component { Title = "SwitchCell", Description = "Apresenta um switch e uma label", Page = typeof(SwitchCellPage) },
                 new Component { Title = "EntryCell", Description = "Apresenta um entry e uma label", Page = typeof(EntryCellPage) },
                 new Component { Title = "ViewCell", Description = "Permite criar celula com layout personalizado", Page = typeof(ViewCellPage) },
+            }
+        });
+        categories.Add(new Category()
+        {
+            Name = "Listas e Coleções",
+            Components = new List<Component>
+            {
+                new Component { Title = "TableView", Description = "Apresenta células em linhas separadas e permite agrupar por seção", Page = typeof(TableViewPage) },
+                new Component { Title = "Picker", Description = "Apresenta uma lista de seleção única", Page = typeof(PickerListPage) },
+                new Component { Title = "ListView", Description = "Apresenta uma lista de itens", Page = typeof(ListViewPage) },
             }
         });
 
