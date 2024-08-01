@@ -86,6 +86,10 @@ public class CategoryRepository
                 new Component { Title = "TableView", Description = "Apresenta células em linhas separadas e permite agrupar por seção", Page = typeof(TableViewPage) },
                 new Component { Title = "Picker", Description = "Apresenta uma lista de seleção única", Page = typeof(PickerListPage) },
                 new Component { Title = "ListView", Description = "Apresenta uma lista de itens", Page = typeof(ListViewPage) },
+                new Component { Title = "CollectionView", Description = "Apresenta uma lista de itens", Page = typeof(CollectionViewPage) },
+                new Component { Title = "CarouselView", Description = "Apresenta uma lista de itens horinzontais com navegação lateral", Page = typeof(CarouselViewPage) },
+                new Component { Title = "BindableLyout (Atributo)", Description = "Permite que layouts possam apresentar listas e coleções", Page = typeof(BindableLayoutPage) },
+                new Component { Title = "DataTemplateSelector (Classe)", Description = "Permite que itens possam ser apresentados com layouts diferentes", Page = typeof(DataTemplateSelectorPage) },
             }
         });
 
