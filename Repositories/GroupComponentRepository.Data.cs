@@ -8,50 +8,75 @@ using AppMauiGallery.Views.Lists;
 
 namespace AppMauiGallery.Repositories;
 
-public class CategoryRepository
+public partial class GroupComponentRepository : IGroupComponentRepository
 {
-    public CategoryRepository() { }
-
-    public List<Category> GetCategories()
+    private void LoadData()
     {
-        List<Category> categories = new List<Category>();
-        categories.Add(new Category
-        {
-            Name = "Layout",
-            Components = new List<Component>
+        _components = new List<Component>();
+        _groupComponents = new List<GroupComponent>();
+
+        LoadLayouts();
+        LoadControls();
+        LoadVisuals();
+        LoadForms();
+        LoadCells();
+        LoadCollections();
+    }
+
+    private void LoadLayouts()
+    {
+        var components = new List<Component>
             {
                 new Component { Title = "StackLayout", Description = "Organização sequencial dos elementos.", Page = typeof(StackLayoutPage) },
                 new Component { Title = "Grid", Description = "Organização os elementos dentro de uma tabela.", Page = typeof(GridLayoutPage) },
                 new Component { Title = "AbsoluteLayout", Description = "Liberdade total para posicionar e dimensionar elementos na tela.", Page = typeof(AbsoluteLayoutPage) },
                 new Component { Title = "FlexLayout", Description = "Organiza os elementos de forma sequencial com muitas opções de personalização.", Page = typeof(FlexLayoutPage) },
-            }
-        });
-        categories.Add(new Category()
-        {
-            Name = "Controles (Views)",
-            Components = new List<Component> 
+            };
+
+        var group = new GroupComponent() { Name = "Layout" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
+    }
+
+    private void LoadControls()
+    {
+        var components = new List<Component>
             {
                 new Component { Title = "BoxView", Description = "Elemento que cria uma caixa para ser apresentada", Page = typeof(BoxViewPage) },
                 new Component { Title = "Label", Description = "Apresenta um texto na tela", Page = typeof(LabelPage) },
                 new Component { Title = "Button", Description = "Apresenta um botão na tela", Page = typeof(ButtonPage) },
                 new Component { Title = "Image", Description = "Apresenta uma imagem na tela", Page = typeof(ImagePage) },
                 new Component { Title = "ImageButton", Description = "Apresenta uma imagem com comportamento de botão", Page = typeof(ImageButtonPage) }
-            }
-        });
-        categories.Add(new Category()
-        {
-            Name = "Visuais",
-            Components = new List<Component>
+            };
+
+        var group = new GroupComponent() { Name = "Controles (Views)" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
+    }
+
+    private void LoadVisuals()
+    {
+        var components = new List<Component>
             {
                 new Component { Title = "Frame", Description = "Caixa que envolve outros elementos.", Page = typeof(FramePage) },
                 new Component { Title = "Border", Description = "Caixa que envolve outros elementos.", Page = typeof(BorderPage) },
                 new Component { Title = "Shadow", Description = "Adiciona sombra ao elemento.", Page = typeof(ShadowPage) }
-            }
-        });
-        categories.Add(new Category()
-        {
-            Name = "Formulários",
-            Components = new List<Component>
+            };
+
+        var group = new GroupComponent() { Name = "Visuals" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
+    }
+
+    private void LoadForms()
+    {
+        var components = new List<Component>
             {
                 new Component { Title = "Entry", Description = "Cria caixa de entrada de texto.", Page = typeof(EntryPage) },
                 new Component { Title = "Editor", Description = "Cria caixa de entrada de texto de multiplas linhas.", Page = typeof(EditorPage) },
@@ -64,24 +89,36 @@ public class CategoryRepository
                 new Component { Title = "DatePicker", Description = "Seleção da data.", Page = typeof(DatePickerPage) },
                 new Component { Title = "SearchBar", Description = "Caixa de busca.", Page = typeof(SearchBarPage) },
                 new Component { Title = "Picker", Description = "Pegar itens de uma lista.", Page = typeof(PickerPage) }
-            }
-        });
-        categories.Add(new Category()
-        {
-            Name = "Celulas",
-            Components = new List<Component>
+            };
+
+        var group = new GroupComponent() { Name = "Formulários" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
+    }
+
+    private void LoadCells()
+    {
+        var components = new List<Component>
             {
                 new Component { Title = "TextCell", Description = "Apresenta até duas labels onde uma é destinada ao título e outra a descrição", Page = typeof(TextCellPage) },
                 new Component { Title = "ImageCell", Description = "Apresenta uma imagem e as duas labels do TextCell", Page = typeof(ImageCellPage) },
                 new Component { Title = "SwitchCell", Description = "Apresenta um switch e uma label", Page = typeof(SwitchCellPage) },
                 new Component { Title = "EntryCell", Description = "Apresenta um entry e uma label", Page = typeof(EntryCellPage) },
                 new Component { Title = "ViewCell", Description = "Permite criar celula com layout personalizado", Page = typeof(ViewCellPage) },
-            }
-        });
-        categories.Add(new Category()
-        {
-            Name = "Listas e Coleções",
-            Components = new List<Component>
+            };
+
+        var group = new GroupComponent() { Name = "Células" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
+    }
+
+    private void LoadCollections()
+    {
+        var components = new List<Component>
             {
                 new Component { Title = "TableView", Description = "Apresenta células em linhas separadas e permite agrupar por seção", Page = typeof(TableViewPage) },
                 new Component { Title = "Picker", Description = "Apresenta uma lista de seleção única", Page = typeof(PickerListPage) },
@@ -90,9 +127,12 @@ public class CategoryRepository
                 new Component { Title = "CarouselView", Description = "Apresenta uma lista de itens horinzontais com navegação lateral", Page = typeof(CarouselViewPage) },
                 new Component { Title = "BindableLyout (Atributo)", Description = "Permite que layouts possam apresentar listas e coleções", Page = typeof(BindableLayoutPage) },
                 new Component { Title = "DataTemplateSelector (Classe)", Description = "Permite que itens possam ser apresentados com layouts diferentes", Page = typeof(DataTemplateSelectorPage) },
-            }
-        });
+            };
 
-        return categories;
+        var group = new GroupComponent() { Name = "Coleções" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
     }
 }
