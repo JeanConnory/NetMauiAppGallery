@@ -147,6 +147,10 @@ public partial class GroupComponentRepository : IGroupComponentRepository
                 new Component { Title = "ApplyToDerivedTypes", Description = "Aplicar um estilo aos elementos derivados do classe/componente atual.", Page = typeof(ApplyDerivedTypes) },
                 new Component { Title = "Inheritance Style", Description = "Como criar estilos derivados de outros.", Page = typeof(InheritanceStyle) },
                 new Component { Title = "Style Class", Description = "Cria classes de estilos para serem aplicadas em componentes.", Page = typeof(StyleClassPage) },
+                new Component { Title = "Static Resource /Dynamic Resource", Description = "Define se o estilo pode ser alterado em tempo real.", Page = typeof(StaticDynamicResource) },
+                new Component { Title = "Tema", Description = "Define um tema padrão para o projeto.", Page = typeof(Theme) },
+                new Component { Title = "AppThemeBinding", Description = "Adapta o tema ao modo claro ou escuro do Sistema operacional.", Page = typeof(AppThemeBindingPage) },
+                new Component { Title = "Visual State Manager (VSM)", Description = "Personalizar a apresentação de acordo com o estado do componente.", Page = typeof(VisualStateManagerPage) },
             };
 
         var group = new GroupComponent() { Name = "Styles" };
