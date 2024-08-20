@@ -5,6 +5,7 @@ using AppMauiGallery.Views.Components.Mains;
 using AppMauiGallery.Views.Components.Visuais;
 using AppMauiGallery.Views.Layouts;
 using AppMauiGallery.Views.Lists;
+using AppMauiGallery.Views.Styles;
 
 namespace AppMauiGallery.Repositories;
 
@@ -21,6 +22,7 @@ public partial class GroupComponentRepository : IGroupComponentRepository
         LoadForms();
         LoadCells();
         LoadCollections();
+        LoadStyles();
     }
 
     private void LoadLayouts()
@@ -130,6 +132,24 @@ public partial class GroupComponentRepository : IGroupComponentRepository
             };
 
         var group = new GroupComponent() { Name = "Coleções" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
+    }
+
+    private void LoadStyles()
+    {
+        var components = new List<Component>
+            {
+                new Component { Title = "Implicit & Explicit Styles", Description = "Explicar como funciona os estilos.", Page = typeof(ImplicitExplicitStyles) },
+                new Component { Title = "Global Styles", Description = "Como criar estilos para todo o projeto.", Page = typeof(GlobalStyle) },
+                new Component { Title = "ApplyToDerivedTypes", Description = "Aplicar um estilo aos elementos derivados do classe/componente atual.", Page = typeof(ApplyDerivedTypes) },
+                new Component { Title = "Inheritance Style", Description = "Como criar estilos derivados de outros.", Page = typeof(InheritanceStyle) },
+                new Component { Title = "Style Class", Description = "Cria classes de estilos para serem aplicadas em componentes.", Page = typeof(StyleClassPage) },
+            };
+
+        var group = new GroupComponent() { Name = "Styles" };
         group.AddRange(components);
 
         _components.AddRange(components);
