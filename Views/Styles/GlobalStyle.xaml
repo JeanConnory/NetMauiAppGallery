@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMauiGallery.Views.Styles.GlobalStyle"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="GlobalStyle">
+    <VerticalStackLayout>
+        <Label Style="{StaticResource Title}" Text="Artigo 1" />
+        <Label Text="Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris lobortis rhoncus tristique varius leo lacus. Himenaeos quis laoreet sociosqu sem scelerisque magnis eu. Id libero in elit natoque sodales congue. Nec potenti etiam vel taciti; est semper dis. Aptent lobortis in facilisis augue dictum suspendisse nisi. Netus vel quam accumsan leo eu bibendum efficitur! Integer elementum vehicula consequat fusce feugiat sit vulputate dolor." />
+        <Label Text="Elit sit litora sollicitudin quam fermentum varius laoreet. Arcu dui habitasse ipsum lacinia mauris at. Nisi sodales inceptos ultricies; augue a posuere. Erat volutpat a id integer himenaeos egestas. Orci non ac magna penatibus quam. Tempus blandit tempor augue class eget. Justo mus accumsan facilisis fusce sociosqu nam mattis." />
+    </VerticalStackLayout>
+</ContentPage>

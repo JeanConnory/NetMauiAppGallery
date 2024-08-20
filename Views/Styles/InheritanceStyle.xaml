@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMauiGallery.Views.Styles.InheritanceStyle"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="InheritanceStyle">
+    <ContentPage.Resources>
+        <Style x:Key="Paragraph" TargetType="Label">
+            <Setter Property="Padding" Value="20, 10" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+        <Style
+            x:Key="Paragraph2"
+            BasedOn="{StaticResource Paragraph}"
+            TargetType="Label">
+            <Setter Property="TextColor" Value="Yellow" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+        <Label Style="{StaticResource Paragraph}" Text="Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris lobortis rhoncus tristique varius leo lacus. Himenaeos quis laoreet sociosqu sem scelerisque magnis eu. Id libero in elit natoque sodales congue. Nec potenti etiam vel taciti; est semper dis. Aptent lobortis in facilisis augue dictum suspendisse nisi. Netus vel quam accumsan leo eu bibendum efficitur! Integer elementum vehicula consequat fusce feugiat sit vulputate dolor." />
+        <Label Style="{StaticResource Paragraph}" Text="Elit sit litora sollicitudin quam fermentum varius laoreet. Arcu dui habitasse ipsum lacinia mauris at. Nisi sodales inceptos ultricies; augue a posuere. Erat volutpat a id integer himenaeos egestas. Orci non ac magna penatibus quam. Tempus blandit tempor augue class eget. Justo mus accumsan facilisis fusce sociosqu nam mattis." />
+        <Label Style="{StaticResource Paragraph2}" Text="Elit sit litora sollicitudin quam fermentum varius laoreet. Arcu dui habitasse ipsum lacinia mauris at. Nisi sodales inceptos ultricies; augue a posuere. Erat volutpat a id integer himenaeos egestas. Orci non ac magna penatibus quam. Tempus blandit tempor augue class eget. Justo mus accumsan facilisis fusce sociosqu nam mattis." />
+    </VerticalStackLayout>
+</ContentPage>

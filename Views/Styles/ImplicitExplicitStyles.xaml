@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMauiGallery.Views.Styles.ImplicitExplicitStyles"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ImplicitExplicitStyles">
+    <ContentPage.Resources>
+        <!--  Implicit  -->
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Red" />
+        </Style>
+
+        <!--  Explicit  -->
+        <Style x:Key="StyleTitle" TargetType="Label">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="Margin" Value="0, 15, 0, 10" />
+        </Style>
+        <Style x:Key="StyleParagraph" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="Gray" />
+            <Setter Property="Padding" Value="5" />
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView Padding="20">
+        <VerticalStackLayout>
+            <Label Text="Publicado em 19/08/2024" />
+            <Label Style="{StaticResource Title}" Text="Artigo 1" />
+            <Label Style="{StaticResource StyleParagraph}" Text="Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris lobortis rhoncus tristique varius leo lacus. Himenaeos quis laoreet sociosqu sem scelerisque magnis eu. Id libero in elit natoque sodales congue. Nec potenti etiam vel taciti; est semper dis. Aptent lobortis in facilisis augue dictum suspendisse nisi. Netus vel quam accumsan leo eu bibendum efficitur! Integer elementum vehicula consequat fusce feugiat sit vulputate dolor." />
+            <Label Style="{StaticResource StyleParagraph}" Text="Elit sit litora sollicitudin quam fermentum varius laoreet. Arcu dui habitasse ipsum lacinia mauris at. Nisi sodales inceptos ultricies; augue a posuere. Erat volutpat a id integer himenaeos egestas. Orci non ac magna penatibus quam. Tempus blandit tempor augue class eget. Justo mus accumsan facilisis fusce sociosqu nam mattis." />
+            <Label Style="{StaticResource StyleTitle}" Text="Artigo 2" />
+            <Label Style="{StaticResource StyleParagraph}" Text="Diam integer leo finibus nisi curae. Nulla feugiat amet class vulputate nulla feugiat morbi blandit. Hac consectetur quisque vulputate arcu leo. Dictum eget gravida pretium amet semper, volutpat porta. Felis nullam risus molestie nostra vivamus ante sit interdum. Porttitor montes hendrerit luctus imperdiet gravida. Tempor justo nunc, faucibus feugiat nec suscipit curae convallis. Phasellus augue in dolor duis arcu id molestie." />
+            <Label Style="{StaticResource StyleParagraph}" Text="Accumsan accumsan proin diam mi eu. Curabitur nunc fames quis accumsan litora curabitur. Dolor quis pellentesque blandit mollis; sed at mollis. Facilisi integer aliquam elit augue vehicula. Non nibh molestie donec varius proin pretium. Facilisi penatibus id rutrum fringilla sed vel, mi dis. Et integer cursus pulvinar donec sagittis non cubilia. Nostra cras justo lorem suspendisse et laoreet ac enim. Tempus elementum platea ad dapibus, consequat placerat. Nisi lacinia bibendum sagittis elit aenean aliquam." />
+            <Label Style="{StaticResource StyleParagraph}" Text="Iaculis himenaeos dis iaculis facilisi tincidunt finibus laoreet dictum tempor. Velit nunc pretium inceptos sem ullamcorper fringilla cras. Sodales vivamus ornare montes purus curae cras mus a. Ex metus magnis cubilia lectus; primis fames turpis consectetur vestibulum. Massa aptent condimentum ligula iaculis cubilia ridiculus cras parturient. Egestas in facilisis eget ipsum congue vivamus scelerisque magnis. Donec nunc condimentum mi per lacinia felis. Augue dignissim himenaeos donec mi cursus sem donec vivamus. Odio fames vel tempus ullamcorper tortor morbi faucibus." />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
