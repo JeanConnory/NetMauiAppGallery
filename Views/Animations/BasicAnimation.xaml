@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMauiGallery.Views.Animations.BasicAnimation"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="BasicAnimation">
+    <ScrollView>
+        <VerticalStackLayout Margin="20">
+            <Border HeightRequest="350">
+                <Image
+                    x:Name="Imagem"
+                    Source="dotnet_bot.png"
+                    WidthRequest="200" />
+            </Border>
+            <Button
+                Margin="5"
+                Clicked="Normal"
+                Text="Normal" />
+            <Button
+                Margin="5"
+                Clicked="Aumentar"
+                Text="Aumentar" />
+            <Button
+                Margin="5"
+                Clicked="Diminuir"
+                Text="Diminuir" />
+            <Button
+                Margin="5"
+                Clicked="Mover"
+                Text="Mover" />
+            <Button
+                Margin="5"
+                Clicked="Rotacao"
+                Text="Rotação" />
+            <Button
+                Margin="5"
+                Clicked="Transparencia"
+                Text="Trasnparencia" />
+            <Border Margin="10" Padding="10">
+                <VerticalStackLayout>
+                    <Button
+                        Margin="5"
+                        Clicked="Sequencial"
+                        Text="Sequencial" />
+                    <Button
+                        Margin="5"
+                        Clicked="Paralelo"
+                        Text="Paralelo" />
+                    <Button
+                        Margin="5"
+                        Clicked="Cancelamento"
+                        Text="Cancelamento" />
+                </VerticalStackLayout>
+            </Border>
+            <Border Margin="10" Padding="10">
+                <VerticalStackLayout>
+                    <Button
+                        Margin="5"
+                        Clicked="Custom"
+                        Text="Animação Customizada" />
+                    <Button
+                        Margin="5"
+                        Clicked="Cor"
+                        Text="Animação da Cor" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
