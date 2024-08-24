@@ -13,6 +13,11 @@ namespace AppMauiGallery
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+
+                    fonts.AddFont("Foldit-Medium.ttf", "FolditMedium");
+                    fonts.AddFont("Foldit-Bold.ttf", "FolditBold");
+                    
+                    fonts.AddFont("Icons.ttf", "Icons");
                 });
 
 #if DEBUG
