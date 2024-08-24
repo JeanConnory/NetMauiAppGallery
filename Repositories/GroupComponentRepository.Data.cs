@@ -1,4 +1,5 @@
 ﻿using AppMauiGallery.Models;
+using AppMauiGallery.Views;
 using AppMauiGallery.Views.Animations;
 using AppMauiGallery.Views.Cells;
 using AppMauiGallery.Views.Components.Forms;
@@ -7,6 +8,7 @@ using AppMauiGallery.Views.Components.Visuais;
 using AppMauiGallery.Views.Layouts;
 using AppMauiGallery.Views.Lists;
 using AppMauiGallery.Views.Styles;
+using AppMauiGallery.Views.Utils;
 
 namespace AppMauiGallery.Repositories;
 
@@ -25,6 +27,7 @@ public partial class GroupComponentRepository : IGroupComponentRepository
         LoadCollections();
         LoadStyles();
         LoadAnimations();
+        LoadUtils();
     }
 
     private void LoadLayouts()
@@ -170,6 +173,24 @@ public partial class GroupComponentRepository : IGroupComponentRepository
             };
 
         var group = new GroupComponent() { Name = "Animation" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
+    }
+
+    private void LoadUtils()
+    {
+        var components = new List<Component>
+            {
+                new Component { Title = "Behavior", Description = "Lógica que pode ser associada a um componente da tela.", Page = typeof(BehaviorPage) },
+                new Component { Title = "Trigger", Description = "Gatilho que dispara uma alteração visual no componente.", Page = typeof(TriggerPage) },
+                new Component { Title = "OnPlatform/OnIdiom", Description = "Define valores diferentes entre o S.O. e também pelo tipo de dispositivo.", Page = typeof(PlatformIdiomPage) },
+                new Component { Title = "Fontes", Description = "Como usar fontes diferentes no nosso projeto.", Page = typeof(FontPage) },
+                new Component { Title = "Color/Brush", Description = "Como colocar as cores no nosso projeto.", Page = typeof(ColorPage) },
+            };
+
+        var group = new GroupComponent() { Name = "Utils" };
         group.AddRange(components);
 
         _components.AddRange(components);
