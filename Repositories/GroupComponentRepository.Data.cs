@@ -1,5 +1,6 @@
 ﻿using AppMauiGallery.Models;
 using AppMauiGallery.Views;
+using AppMauiGallery.Views.Accessability;
 using AppMauiGallery.Views.Animations;
 using AppMauiGallery.Views.Cells;
 using AppMauiGallery.Views.Components.Forms;
@@ -7,6 +8,7 @@ using AppMauiGallery.Views.Components.Mains;
 using AppMauiGallery.Views.Components.Visuais;
 using AppMauiGallery.Views.Layouts;
 using AppMauiGallery.Views.Lists;
+using AppMauiGallery.Views.Shells;
 using AppMauiGallery.Views.Styles;
 using AppMauiGallery.Views.Utils;
 
@@ -28,6 +30,36 @@ public partial class GroupComponentRepository : IGroupComponentRepository
         LoadStyles();
         LoadAnimations();
         LoadUtils();
+        LoadShell();
+        LoadAccessability();
+    }
+
+    private void LoadShell()
+    {
+        var components = new List<Component>
+            {
+                new Component { Title = "Shell", Description = "Uma nova forma de estruturar as páginas do nosso projeto.", Page = typeof(AppShell), IsReplaceMainPage = true },
+            };
+
+        var group = new GroupComponent() { Name = "Shell" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
+    }
+
+    private void LoadAccessability()
+    {
+        var components = new List<Component>
+            {
+                new Component { Title = "Semantic", Description = "Elemento que torna nosso aplicativo visível para quem tem necessidades especiais.", Page = typeof(AccessabilityPage) },
+            };
+
+        var group = new GroupComponent() { Name = "Accessability" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
     }
 
     private void LoadLayouts()

@@ -25,10 +25,17 @@ public partial class MainPage : ContentPage
     private void OnTapComponent(object sender, TappedEventArgs e)
     {
         KeyboardFix.HideKeyboard();
-        var page = (Type)e.Parameter;
+        var component = (Component)e.Parameter;
 
-        ((FlyoutPage)App.Current.MainPage).Detail = new NavigationPage((Page)Activator.CreateInstance(page)); //Mudança para a página
-        ((FlyoutPage)App.Current.MainPage).IsPresented = false; //Esconder o menu lateral flyout
+        if (component.IsReplaceMainPage == false)
+        {
+            ((FlyoutPage)App.Current.MainPage).Detail = new NavigationPage((Page)Activator.CreateInstance(component.Page)); //Mudança para a página
+            ((FlyoutPage)App.Current.MainPage).IsPresented = false; //Esconder o menu lateral flyout
+        }
+        else
+        {
+            App.Current.MainPage = (Page)Activator.CreateInstance(component.Page);
+        }
     }
 
     private void Entry_TextChanged(object sender, TextChangedEventArgs e)
