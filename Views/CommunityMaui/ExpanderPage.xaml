@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMauiGallery.Views.CommunityMaui.ExpanderPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="ExpanderPage">
+    <VerticalStackLayout Padding="20">
+        <toolkit:Expander Direction="Down" IsExpanded="True">
+            <toolkit:Expander.Header>
+                <Border Padding="10" BackgroundColor="LightGray">
+                    <Label HorizontalOptions="Center" Text="Titulo" />
+                </Border>
+            </toolkit:Expander.Header>
+            <Border Padding="10">
+                <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+            </Border>
+        </toolkit:Expander>
+        <toolkit:Expander Direction="Down">
+            <toolkit:Expander.Header>
+                <Border Padding="10" BackgroundColor="LightGray">
+                    <Label HorizontalOptions="Center" Text="Titulo" />
+                </Border>
+            </toolkit:Expander.Header>
+            <Border Padding="10">
+                <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+            </Border>
+        </toolkit:Expander>
+        <toolkit:Expander Direction="Down">
+            <toolkit:Expander.Header>
+                <Border Padding="10" BackgroundColor="LightGray">
+                    <Label HorizontalOptions="Center" Text="Titulo" />
+                </Border>
+            </toolkit:Expander.Header>
+            <Border Padding="10">
+                <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+            </Border>
+        </toolkit:Expander>
+    </VerticalStackLayout>
+</ContentPage>

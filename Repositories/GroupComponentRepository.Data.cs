@@ -1,8 +1,8 @@
 ﻿using AppMauiGallery.Models;
-using AppMauiGallery.Views;
 using AppMauiGallery.Views.Accessability;
 using AppMauiGallery.Views.Animations;
 using AppMauiGallery.Views.Cells;
+using AppMauiGallery.Views.CommunityMaui;
 using AppMauiGallery.Views.Components.Forms;
 using AppMauiGallery.Views.Components.Mains;
 using AppMauiGallery.Views.Components.Visuais;
@@ -32,6 +32,25 @@ public partial class GroupComponentRepository : IGroupComponentRepository
         LoadUtils();
         LoadShell();
         LoadAccessability();
+        LoadCommunityMaui();
+    }
+
+    private void LoadCommunityMaui()
+    {
+        var components = new List<Component>
+            {
+                new Component { Title = "Sanckbar e Toast", Description = "Formas de emitir mensagens para o usuário", Page = typeof(AlertPage) },
+                new Component { Title = "Behaviors", Description = "Apresenta alguns behaviors que são: Masked, StatusBar, EventToCommand(MVVM)", Page = typeof(CommunityBehaviorPage) },
+                new Component { Title = "Expander", Description = "Um componente que oculta/apresenta um conteúdo associado a ele", Page = typeof(ExpanderPage) },
+                new Component { Title = "Popup", Description = "Apresenta um modal(pop-up) na tela", Page = typeof(PopupPage) },
+                new Component { Title = "MediaElement", Description = "Player de mídia (áudio/vídeo)", Page = typeof(MidiaElementPage) },
+            };
+
+        var group = new GroupComponent() { Name = ".NET MAUI Community Toolkit" };
+        group.AddRange(components);
+
+        _components.AddRange(components);
+        _groupComponents.Add(group);
     }
 
     private void LoadShell()
